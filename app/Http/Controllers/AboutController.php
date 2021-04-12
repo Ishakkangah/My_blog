@@ -9,9 +9,10 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $my_about = DB::table('my_about')->get();
+        // $my_about = DB::table('students')->get();
+        $my_about = \App\models\my_about::all();
         $my_profile = DB::table('my_profile')->get();
-        $my_education = DB::table('my_education')->get();
+        $my_education = \App\models\my_education::all();
         return view('about', [
             'my_profile' => $my_profile, 
             'my_about' => $my_about,
