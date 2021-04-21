@@ -13,10 +13,12 @@ class AboutController extends Controller
         $my_about = \App\models\my_about::all();
         $my_profile = DB::table('my_profile')->get();
         $my_education = \App\models\my_education::all();
+        $my_student = \App\models\student::all();
         return view('about', [
             'my_profile' => $my_profile, 
             'my_about' => $my_about,
-            'my_education' => $my_education
+            'my_education' => $my_education,
+            'student' => $my_student
             
             ]);
     }

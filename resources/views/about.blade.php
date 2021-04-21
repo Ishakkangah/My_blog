@@ -64,6 +64,7 @@
 		</div>
 		</div>
 	</div>
+<!-- END ABOUT -->
 
 	
 	<div class="col-sm-6 mx-auto mt-5">
@@ -81,8 +82,26 @@
 		</div>
 	</div>
 </div>
-<!-- END ABOUT -->
 
+	
+<div class="col-sm-10 mx-auto mt-5">
+		<div class="card">
+		<div class="card-body text-center">
+			<h5 class="card-header text-center font-weight-bolder bg-success">DAFTAR MAHASISWA</h5>
+			<table class="table table-hover">
+			@foreach( $student as $s )
+				<tr class="mt-2">
+					<th class="font-weight-light">{{ $s->name }}</th>
+					<th class="font-weight-light">{{ $s->email }}</th>
+					<th class="font-weight-light">{{ $s->nrp }}</th>
+					<th class="font-weight-light">{{ $s->jurusan }}</th>
+				</tr>
+			@endforeach
+			</table>
+		</div>
+		</div>
+	</div>
+</div>
 
 
 
